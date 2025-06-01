@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Thesis Research Proposal Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif; /* English font first */
+        }
+        .section-title {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            margin-bottom: 1rem; /* 16px */
+            padding-bottom: 0.5rem; /* 8px */
+            border-bottom: 2px solid #60A5FA; /* Tailwind blue-400 */
+            display: flex;
+            align-items: center;
+        }
+        .subsection-title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 600;
+            margin-top: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+            color: #1E40AF; /* Tailwind blue-800 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1.5rem; /* 24px */
+        }
+        .highlight {
+            color: #D97706; /* Tailwind amber-600 */
+            font-weight: 600;
+        }
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 0.5em;
+        }
+        .problem-icon { fill: #EF4444; } /* red-500 */
+        .solution-icon { fill: #10B981; } /* emerald-500 */
+        .research-icon { fill: #8B5CF6; } /* violet-500 */
+        .tech-icon { fill: #3B82F6; } /* blue-500 */
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-700">Master's Thesis Research Proposal</h1>
+            <p class="text-lg text-slate-600 mt-2">Research on Data Augmentation by Generative AI and Explainability of Machine Learning</p>
+        </header>
+
+        <div class="card">
+            <h2 class="section-title">
+                <svg class="icon research-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.71 7.04c-.34-.34-.85-.54-1.41-.54H4.7c-.56 0-1.07.2-1.41.54-.34.34-.54.85-.54 1.41V18.5c0 .56.2 1.07.54 1.41.34.34.85.54 1.41.54H18.3c.56 0 1.07-.2 1.41-.54.34-.34-.54-.85-.54-1.41V8.45c0-.56-.2-1.07-.54-1.41ZM5 18.5V8.75c0-.14.05-.27.15-.35L12 13.17l6.85-4.77c.1-.08.15-.21.15-.35V18.5H5Z M12 11.25 5.5 7h13L12 11.25Z"/></svg>
+                Core Research Theme
+            </h2>
+            <p class="text-slate-700 leading-relaxed">
+                The research theme focuses on <span class="highlight">"Data Augmentation by Generative AI"</span> and <span class="highlight">"Explainability of Machine Learning (XAI)"</span>.
+                These will be combined with the field of <span class="highlight">"Decision Support"</span>, specifically aiming to build a system to support junior maintenance and operations staff in handling system failures.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">
+                <svg class="icon tech-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                Proposed System: AI-Driven Incident Response Support System
+            </h2>
+            <p class="text-slate-600 mb-4">To assist junior employees (1-3 years of experience) in completing a series of incident response tasks without veteran support.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 border border-blue-200 rounded-lg bg-blue-50">
+                    <h3 class="subsection-title">
+                        <svg class="icon inline-block problem-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" /></svg>
+                        Function 1: Incident Cause Investigation
+                    </h3>
+                    <p class="text-sm text-slate-700 mb-2">
+                        Collect and analyze various information (logs, chat, past incidents, configuration data, etc.) to identify the cause.
+                        <span class="font-semibold text-red-600">Challenges for Juniors:</span> Difficulty in information gathering/handling, lack of understanding of complex system architecture.
+                    </p>
+                    <p class="text-sm text-slate-700 font-semibold">
+                        <span class="highlight">System's Value Proposition:</span> In addition to cause identification, output the rationale for decision-making, supporting logical explanations.
+                    </p>
+                    <div class="mt-2">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                            Machine Learning
+                        </span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 ml-1">
+                            LLM
+                        </span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 ml-1">
+                            XAI
+                        </span>
+                    </div>
+                </div>
+
+                <div class="p-4 border border-green-200 rounded-lg bg-green-50">
+                    <h3 class="subsection-title">
+                        <svg class="icon inline-block solution-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M2.5 3A1.5 1.5 0 001 4.5v1.755a3 3 0 00-1.5 2.648V15.5A1.5 1.5 0 001 17h14a1.5 1.5 0 001.5-1.5V8.903a3 3 0 00-1.5-2.648V4.5A1.5 1.5 0 0015 3H2.5zM3 15V9h10v6H3zM3 7V4.5h10V7H3z" /></svg>
+                        Function 2: Status Reporting (Internal/External)
+                    </h3>
+                    <p class="text-sm text-slate-700 mb-2">
+                        Automatically generate and issue appropriate reports (during and after incident response) based on the situation.
+                        <span class="font-semibold text-red-600">Challenges for Juniors:</span> Delays in choosing appropriate wording, communication scope, and reporting methods.
+                    </p>
+                    <p class="text-sm text-slate-700 font-semibold">
+                        <span class="highlight">System's Value Proposition:</span> In addition to automatic report generation, output the basis for generation.
+                    </p>
+                     <div class="mt-2">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">
+                            Machine Learning
+                        </span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200 ml-1">
+                            LLM
+                        </span>
+                         <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200 ml-1">
+                            XAI
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">
+                <svg class="icon research-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"/></svg>
+                Key Research Challenges
+            </h2>
+            <p class="text-slate-600 mb-4">The pursuit of reliability and explainability in AI utilization in mission-critical fields is key.</p>
+
+            <div class="mb-6 p-4 border border-amber-200 rounded-lg bg-amber-50">
+                <h3 class="subsection-title text-amber-700">
+                    Subject 1: Verifying the Reliability of Data Augmentation by LLM
+                </h3>
+                <p class="text-sm text-slate-700 mb-2">
+                    <span class="font-semibold">Background:</span> Incident response data is scarce and diverse (unique incidents, new errors, rare errors). Lack of training data for ML models is a challenge.
+                </p>
+                <p class="text-sm text-slate-700">
+                    <span class="font-semibold">Approach:</span>
+                </p>
+                <ul class="list-disc list-inside text-sm text-slate-700 ml-4">
+                    <li>Generate simulated training data (impact scope, fault location, LOGs, mock chat, cause, etc.) from past data using LLM.</li>
+                    <li>Prove to what extent the output accuracy of models trained on generated data is reliable compared to using real data.</li>
+                    <li>Explore methodologies for generating mathematically reliable training data using LLM.</li>
+                </ul>
+                <p class="text-sm text-slate-700 mt-2"><span class="highlight">Key Issue:</span> Evaluating the reliability when combining data augmentation, LLM, and machine learning.</p>
+            </div>
+
+            <div class="p-4 border border-purple-200 rounded-lg bg-purple-50">
+                <h3 class="subsection-title text-purple-700">
+                    Subject 2: Explainability of Machine Learning Model Outputs Integrating Multiple Information Sources
+                </h3>
+                <p class="text-sm text-slate-700 mb-2">
+                    <span class="font-semibold">Background:</span> In mission-critical systems, presenting the rationale behind AI decisions is essential.
+                </p>
+                 <p class="text-sm text-slate-700">
+                    <span class="font-semibold">Approach:</span>
+                </p>
+                <ul class="list-disc list-inside text-sm text-slate-700 ml-4">
+                    <li>Perform "incident cause/countermeasure identification" and "automatic report generation" from various information sources (logs, design documents, chat, past incidents, etc.).</li>
+                    <li>Derive not only correlations in outputs but also <span class="highlight">causal relationships and detailed rationales</span>, making them explainable to users.</li>
+                    <li>Utilize algorithms with high explainability (Decision Trees, LightGBM, Gradient Boosting, etc.) and consider models with even higher accuracy and explainability.</li>
+                </ul>
+                 <p class="text-sm text-slate-700 mt-2"><span class="highlight">Goal:</span> Construct a machine learning architecture that maximizes explainability.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="section-title">
+                <svg class="icon solution-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Expected Contributions
+            </h2>
+            <ul class="list-disc list-inside text-slate-700 space-y-1">
+                <li>Skill improvement and earlier productivity for junior maintenance and operations staff.</li>
+                <li>Faster, more efficient, and higher quality system incident response.</li>
+                <li>Contribution to improving reliability and social implementation of AI in mission-critical systems.</li>
+                <li>Provision of academic insights into Explainable AI (XAI) and data augmentation techniques.</li>
+            </ul>
+        </div>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-sm text-slate-500">Master's Thesis Research Proposal Overview</p>
+        </footer>
+    </div>
+</body>
+</html>
